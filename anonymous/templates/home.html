@@ -11,7 +11,10 @@
 <main>
     
     {% for item in notes  %}
-        <div>{{ item.note }}</div>
+        <div>
+            <p>{{ item.note }}</p>
+            <span>{{ item.created }}</span>
+        </div>
     {% endfor %}
         
 </main>
