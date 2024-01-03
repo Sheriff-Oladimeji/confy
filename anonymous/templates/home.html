@@ -8,7 +8,13 @@
 
 {% block content %}
 
-
+<main>
+    
+    {% for item in notes  %}
+        <div>{{ item.note }}</div>
+    {% endfor %}
+        
+</main>
     
 {% endblock  %}
     
