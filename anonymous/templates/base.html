@@ -4,35 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              roboto: ["Roboto", "sans-serif"],
+            },
           },
-           fontFamily: {
-      roboto : ['Roboto', "sans-serif"]
-    },
-        }
+        },
+      };
+    </script>
+    <style>
+      .box {
+        display: block;
+        padding: 0.625rem;
+        border-radius: 0.5rem;
+        border-width: 1px;
+        border-color: #d1d5db;
+        width: 100%;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: #111827;
+        background-color: #f9fafb;
       }
-    }
-  </script>
+    </style>
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body class="font-roboto">
-   <div class="w-[90%] mx-auto sm:w-[80%] py-12 flex justify-between items-center"> <h1 class="text-3xl font-bold text-grey-600 ">Anonymous  App</h1>
-    <span class="bg-blue-500 text-white font-bold rounded-md px-4 text-center py-2 w-max">
-      <a href="/form">Add Anonymous Note</a>
-    </span>
-  </div>
-   <div class="w-[90%] mx-auto sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%]">
-     
+    <div
+      class="w-[90%] flex-wrap mx-auto sm:w-[80%] py-12 flex justify-between items-center"
+    >
+      <a href="/" class="text-2xl md:text-3xl font-bold text-grey-600">Confy</a>
 
-    {% block content %} {% endblock %}
-   </div>
+      <a
+        href="/form"
+        class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >Add new  <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg> </a
+      >
+    </div>
+    <div class="w-[90%] mx-auto sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%]">
+      {% block content %} {% endblock %}
+    </div>
   </body>
 </html>
