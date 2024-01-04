@@ -8,10 +8,10 @@
 
 {% block content %}
 
-<main>
+<main class="grid gap-6">
     
     {% for item in notes  %}
-        <div>
+        <div class="bg-gray-700 flex flex-col p-4 rounded-md text-gray-200  gap-4">
             <p>{{ item.note }}</p>
             <span>{{ item.created }}</span>
         </div>

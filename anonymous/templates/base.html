@@ -3,11 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
-    <h1>Anonymous  App</h1>
+   <div class="w-[90%] mx-auto sm:w-[80%] py-12 flex justify-between items-center"> <h1 class="text-3xl font-bold text-grey-600 ">Anonymous  App</h1>
+    <span class="bg-blue-500 text-white font-bold rounded-md px-4 text-center py-2 w-max">
+      <a href="/form">Add Anonymous Note</a>
+    </span>
+  </div>
+   <div class="w-[90%] mx-auto sm:w-[70%] md:w-[60%] lg:w-[50%] xl:w-[40%]">
+     
 
     {% block content %} {% endblock %}
+   </div>
   </body>
 </html>
